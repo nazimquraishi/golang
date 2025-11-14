@@ -1,0 +1,14 @@
+services:
+  go-dev:
+    # Tell Docker Compose to build the image using our new dev.Dockerfile.
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    # Name the container so it's easy to find.
+    container_name: go-dev-container
+    # Mount the entire current directory into the /workspace directory in the container.
+    # This means any file you change locally is instantly updated inside the container.
+    volumes:
+      - .:/workspace
+    # Keep the terminal open.
+    tty: true

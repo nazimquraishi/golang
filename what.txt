@@ -1,0 +1,4 @@
+1. Docker container which has full go development environment
+2. container starts up and then waits
+3. local src folder is mapped properly
+4. I can add a go file, compile and debug it by attaching vscode to the running container.
